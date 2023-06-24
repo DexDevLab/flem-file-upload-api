@@ -1,85 +1,62 @@
-<hr>
-<h1 align="center">flem-file-upload-api</h1>
+<h1 align="center">FLEM File Upload API</h1>
 <p align=center><i align="center">API que consome requisições das aplicações FLEM para manipulação e armazenamento de arquivos.</i></p>
+
 <br>
 
 <div align="center">
 
-<a href="">![Known Vulnerabilities](https://snyk.io/test/github/frtechdev/flem-file-upload-api/badge.svg)</a>
-<a href="">![Code Size](https://img.shields.io/github/languages/code-size/frtechdev/flem-file-upload-api)</a>
-<a href="">![Repo Size](https://img.shields.io/github/repo-size/frtechdev/flem-file-upload-api)</a>
-<a href="">[![Contributors](https://img.shields.io/github/contributors/frtechdev/flem-file-upload-api)](https://github.com/frtechdev/flem-file-upload-api/graphs/contributors)</a><br>
-<a href="">![Last Commit](https://img.shields.io/github/last-commit/frtechdev/flem-file-upload-api)</a>
-<a href="">[![Fork](https://img.shields.io/github/forks/frtechdev/flem-file-upload-api)](https://github.com/frtechdev/flem-file-upload-api/fork) </a>
-<a href="">![Version](https://img.shields.io/badge/version-1.0.3-005bff) </a>
-<a href="">[![license](https://img.shields.io/github/license/frtechdev/flem-file-upload-api)](https://github.com/frtechdev/flem-file-upload-api/LICENSE)</a>
+<a href="https://www.javascript.com"><img src="https://img.shields.io/badge/JavaScript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E" height="22" alt="JavaScript"/></a>
+<a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/node.js-6DA55F?logo=node.js&logoColor=white" height="22" alt="NodeJS"/></a>
+<a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white" height="22" alt="NextJS"/></a>
+<a href="https://www.prisma.io"><img src="https://img.shields.io/badge/Prisma-3982CE?logo=Prisma&logoColor=white" height="22" alt="PrismaIO"/></a>
+<a href="https://www.microsoft.com/pt-br/sql-server/sql-server-2019"><img src="https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?logo=microsoft%20sql%20server&logoColor=white" height="22" alt="MSSQLServer"/></a>
 
-<br>
+<a href=""><img src="https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg" height="22" alt="Maintenance-actively-developed"/></a>
+<a href=""><img src="https://img.shields.io/github/last-commit/frtechdev/flem-file-upload-api" height="22" alt="LastCommit"></a>
+<a href=""><img src="https://snyk.io/test/github/frtechdev/flem-file-upload-api/badge.svg" height="22" alt="Snyk"/></a>
+
+<a href=""><img src="https://img.shields.io/github/repo-size/frtechdev/flem-file-upload-api" height="22" alt="RepoSize"/></a>
+<a href=""><img src="https://img.shields.io/github/languages/code-size/frtechdev/flem-file-upload-api" height="22" alt="CodeSize"/></a>
+<a href=""><img src="https://img.shields.io/github/contributors/frtechdev/flem-file-upload-api" height="22" alt="Contributors"></a>
+
+<a href=""><img src="https://img.shields.io/github/forks/frtechdev/flem-file-upload-api" height="22" alt="Fork"></a>
+<a href=""><img src="https://img.shields.io/github/release/frtechdev/flem-file-upload-api.svg" height="22" alt="LatestRelease"></a>
+<a href="https://github.com/frtechdev/flem-file-upload-api/blob/main/LICENSE"><img src="https://img.shields.io/github/license/frtechdev/flem-file-upload-api" height="22" alt="License"></a>
+
+|| [Conteúdo](#section-conteudo) || [Características](#section-caracteristicas) || [Stack](#section-stack) || [Documentação](#section-documentacao) || [Instruções](#section-instrucoes) ||
+
+|| [Variáveis de Ambiente](#section-vars) || [Notas de versão](#section-changelog) || [Autores](#section-autores) || [Contato](#section-contato) || [Licença](#section-licenca) ||
 
 </div>
 
 <hr>
-<br>
 
-API que consome requisições das aplicações FLEM para manipulação e armazenamento de arquivos.
-
-<br>
+<a name="section-conteudo">
 
 ## Conteúdo
 
-- [Objetivo](#section-obj)
-- [Características](#section-carac)
-- [Especificações](#section-specs)
-- [Stack](#section-stack)
-- [Documentação](#section-docs)
-- [Como usar este repositório](#section-como-usar)
-- [Notas de versão](#section-changelog)
-- [Autores](#section-autores)
-- [Contato](#section-contato)
-- [Licença](#section-licenca)
+</a>
 
 <br>
-<hr>
 
-<a name="section-obj">
-
-## Objetivo
-
-</a>
+API que consome requisições das aplicações FLEM para manipulação e armazenamento de arquivos.
+Tem os seguintes objetivos:
 
 - Fornecer uma API de alta performance e baixo custo computacional que consuma de maneira segura e estável os dados requisitados
 - Manipular de maneira independente e com controle integrado dados provenientes dos servidores de arquivo FLEM.
 
-<br>
 <hr>
 
-<a name="section-carac">
+<a name="section-caracteristicas">
 
 ## Características
 
 </a>
 
+<br>
+
 - Facilita os processos resumindo todas as suas funcionalidades centradas no consumo dos dados sem comprometer a performance.
 
-<br>
-<hr>
-
-<a name="section-specs">
-
-## Especificações
-
-</a>
-
-- **Tipo de Software:** Interface de Programação de Aplicações
-- **Distribuição:** Web
-- **Arquitetura:** MVC
-- **Metodologia de Projeto:** Metodologia Ágil
-- **Estrutura de Biblioteca:** Baseada em Framework
-- **Protocolo de Banco de Dados:** ODBC
-- **Dialeto de Banco de Dados:** SQL
-- **Disponibilidade de Código:** Open Source
-
-<br>
 <hr>
 
 <a name="section-stack">
@@ -88,52 +65,55 @@ API que consome requisições das aplicações FLEM para manipulação e armazen
 
 </a>
 
+<br>
+
 - **Linguagem Principal:** [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - **Framework Principal:** [Node.js](https://nodejs.org/en/docs/)
 - **Framework estrutural:** [Next.js](https://nextjs.org/docs/getting-started)
-- **Biblioteca de Conexão ODBC:** [Prisma.io](https://www.prisma.io)
-- **Gerenciador de Bibliotecas:** [Yarn](https://yarnpkg.com/getting-started)
+- **Biblioteca de Conexão ODBC / ORM:** [Prisma.io](https://www.prisma.io)
+- **Banco de Dados:** [SQL](https://pt.wikipedia.org/wiki/SQL)
+- **Gerenciador de Dependências:** [Yarn](https://yarnpkg.com/getting-started)
 - **Bibliotecas:** Para uma lista completa de bibliotecas e dependências nos mais variados escopos, conferir o arquivo [package.json](https://github.com/frtechdev/flem-file-upload-api/blob/main/package.json).
 
-<br>
 <hr>
 
-<a name="section-docs">
+<a name="section-documentacao">
 
 ## Documentação
 
 </a>
 
-<a name="section-diagrama">
+<br>
 
-### Diagrama de Banco de Dados
+- [Manual de Especificações de UML](https://frtechdev.github.io/flem-file-upload-api/resources/file_upload_api_manual_de_especificacoes_de_uml.pdf)
 
-</a>
+- [Diagrama de Modelo de Banco de Dados em PDF](https://frtechdev.github.io/flem-file-upload-api/resources/diagram-pdf.pdf)
 
-[Diagrama em PDF](https://frtechdev.github.io/flem-file-upload-api/diagram/diagram-pdf.pdf)
-
-[Diagrama em SQL](https://frtechdev.github.io/flem-file-upload-api/diagram/diagram-sql.sql)
+- [Diagrama de Modelo de Banco de Dados em SQL](https://frtechdev.github.io/flem-file-upload-api/resources/diagram-sql.sql)
 
 Documentação adicional pode ser encontrada [aqui](https://frtechdev.github.io/flem-file-upload-api/).
 
-<br>
 <hr>
 
-<a name="section-como-usar">
+<a name="section-instrucoes">
 
-## Como usar este repositório
+## Instruções
 
 </a>
 
-<a name="section-use-project">
+<br>
 
-### Como Projeto
+### Utilizando o repositório como projeto
 
 </a>
 
 1 - Faça um git clone ou o download do repositório, da forma que preferir
 
-`git clone https://github.com/frtechdev/flem-file-upload-api.git`
+```bash
+
+git clone https://github.com/frtechdev/flem-file-upload-api.git
+
+```
 
 2 - Instale um gerenciador de pacotes (preferencialmente yarn) utilizando um terminal no diretório raiz do repositório clonado
 
@@ -143,28 +123,44 @@ Documentação adicional pode ser encontrada [aqui](https://frtechdev.github.io/
 
 `yarn dev` ou `npm run dev`
 
-<a name="section-use-app">
+**Lembre-se de executar `yarn build` ANTES de criar seu container com base no repositório local.**
 
-### Como Aplicação
+### Implantando o projeto
 
 </a>
 
-1 - Instale uma instância docker em uma máquina dedicada, conforme instruções na [Documentação do Docker](https://docs.docker.com/engine/install/).
+#### Por um repositório clonado
 
-2 - Faça um git clone ou o download do repositório, da forma que preferir
+**Lembre-se de executar `yarn build` ANTES de criar seu container com base no repositório local.**
 
-`git clone https://github.com/frtechdev/flem-file-upload-api.git`
+```bash
+docker build --env-file .env -f Dockerfile .
+```
 
-3 - Execute o Dockerfile no diretório raiz do repositório clonado
+#### Diretamente do repositório remoto
 
-`docker build . -t flem-file-upload-api:dev`
+Você pode utilizar o `docker build` referenciando diretamente o repositório:
 
-4 - Inicie o container
+```bash
+docker build https://github.com/frtechdev/flem-file-upload-api.git#main
+```
 
-`docker run -d -p XXXX:3000 --name flem-file-upload-api:dev`
+Alternativamente, pode usar o comando detalhado para alterar diretamente configurações como porta e nome do repositório:
 
-Altere o "XXXX" para uma porta externa de sua escolha. Por padrão, a porta interna é 3000.
+```bash
+docker run -p X:3000 --env-file .env -e github='https://github.com/frtechdev/flem-file-upload-api.git' -it frtechdev/flem-file-upload-api
+```
+
+**Lembre-se de criar um arquivo `.env` para definir as variáveis de ambiente utilizadas na imagem, ou especificar as variáveis utilizadas uma a uma na linha de comando acima.**
+
+Onde "X" é uma porta externa de sua escolha. Por padrão, a porta interna é 3000.
 Para alterar a porta interna, altere a linha `ENV PORT` do [Dockerfile](https://github.com/frtechdev/flem-file-upload-api/blob/main/Dockerfile).
+
+Para mais informações, visite a [Documentação do Docker](https://docs.docker.com).
+
+</a>
+
+<hr>
 
 <a name="section-vars">
 
@@ -172,14 +168,15 @@ Para alterar a porta interna, altere a linha `ENV PORT` do [Dockerfile](https://
 
 </a>
 
-Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de ambiente:
-
-| Variável     | Uso  |
-| ------------|-------|
-|`DATABASE_URL` | Define o endereço do Servidor de BD e credenciais para acesso, de acordo com as especificações da biblioteca [Prisma.io](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-node-sqlserver)| |
-|`NEXT_PUBLIC_API_FILESERVER_STORAGE_UPLOAD` | Define o local de armazenamento dos arquivos no Servidor de Arquivos ("./storage/uploads" como padrão)  | |
-
 <br>
+
+#### Variáveis Principais
+
+| Variável      | Uso   |
+|---------------|-------|
+|`DATABASE_URL` | Define o endereço do Servidor de BD e as demais informações do mesmo. Aceita uma string no formato `sqlserver://<ENDEREÇO DO SERVIDOR>:<PORTA>;database=<NOME DO BANCO DE DADOS>;user=<USUÁRIO>;password=<SENHA>`. | |
+|`QUERY_BATCH_SIZE` | Tamanho máximo das queries para o BD (Padrão: `2000`) | |
+|`NEXT_PUBLIC_API_FILESERVER_STORAGE_UPLOAD` | Caminho interno para armazenamento de arquivos. (Padrão: `'./storage/uploads'`) | |
 
 <hr>
 
@@ -191,24 +188,29 @@ Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de amb
 
 <br>
 
+### v1.0.4-230624
+
+- Criação de um script de Github Actions para Tag e Release automáticos das versões no branch `main`
+- Adição de um script de Github Actions para deploy automático de imagem Docker
+- Adição de script de limpeza de index de cache do Git
+- Adição do arquivo `.yarnclean` para sanitização de módulos
+- Inclusão de scripts yarn
+- Documentação de todos os componentes, módulos, arquivos e componentes do projeto
+- Criação de Handler para tratamento de Exceções e resposta para o usuário
+- Atualização da Documentação
+
 ### v1.0.3-221111
 
 - Atualização da Documentação
-
-<br>
 
 ### v1.0.2-221111
 
 - Atualização da Documentação
 
-<br>
-
 ### v1.0.1-221107
 
 - Ajuste para utilização do [Snyk](https://snyk.io) como plataforma de avaliação de segurança e Lifecycle
 - Atualização da Documentação
-
-<br>
 
 ### v1.0.0-221104
 
@@ -220,7 +222,6 @@ Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de amb
 - Adição do Dockerfile
 - Adição da Documentação
 
-<br>
 <hr>
 
 <a name="section-autores">
@@ -229,11 +230,12 @@ Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de amb
 
 </a>
 
+<br>
+
 <a href="https://github.com/frtechdev/flem-file-upload-api/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=frtechdev/flem-file-upload-api" />
 </a>
 
-<br>
 <hr>
 
 <a name="section-contato">
@@ -242,10 +244,11 @@ Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de amb
 
 </a>
 
-Se você gostou desse projeto, nos dê uma <a href="https://github.com/frtechdev/flem-file-upload-api" data-icon="octicon-star" aria-label="Star frtechdev/flem-file-upload-api on GitHub">estrela</a>. Isso agirá como um indicador da qualidade dos nossos serviços. <br>
-Para contato, envie um email a: <a href="mailto:devops@frtechnologies.com.br">devops@frtechnologies.com.br</a>
-
 <br>
+
+Se você gostou deste projeto, dê uma <a href="https://github.com/frtechdev/flem-file-upload-api" data-icon="octicon-star" aria-label="Star frtechdev/flem-file-upload-api on GitHub">estrela</a>. <br>
+Para contato, envie um email a: <a href="mailto:dex.houshi@hotmail.com">dex.houshi@hotmail.com</a>
+
 <hr>
 
 <a name="section-licenca">

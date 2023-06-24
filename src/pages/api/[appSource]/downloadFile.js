@@ -1,19 +1,26 @@
 import { apiAllowCors, prisma } from "services";
 import fs from "fs";
+import { exceptionHandler } from "utils/exceptionHandler";
 
 /**
- * Handler de Requisição da Rota.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response
+ * Handler de manipulação de download de arquivo.
+ * @method handler
+ * @memberof module:downloadFile
+ * @param {Object} req HTTP request.
+ * @param {Object} res HTTP response.
+ * @returns {Object} HTTP response como JSON contendo a resposta da query consultada.
  */
 const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
-      await getFile(req, res);
-      break;
+      try {
+        const response = await getFile(req, res);
+        return response;
+      } catch (e) {
+        return exceptionHandler(e, res);
+      }
     default:
-      res.status(405).send({ message: "Only GET requests allowed" });
-      break;
+      return exceptionHandler(null, res);
   }
 };
 export default apiAllowCors(handler);
@@ -25,10 +32,12 @@ export default apiAllowCors(handler);
  * 
  * Exemplo: http://localhost:3000/api/Teste/downloadFile?fileId='2rdr454t365'&referenceObjId='3354f45'
  * 
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response 
- * @param {*} fileId ID do arquivo a ser enviado
- * @param {*} referenceObjId ID de referência do objeto a ser enviado
+ * @method getFile
+ * @memberof module:downloadFile
+ * @param {Object} req HTTP Request
+ * @param {Object} res HTTP Response 
+ * @param {String} fileId ID do arquivo a ser enviado
+ * @param {String} referenceObjId ID de referência do objeto a ser enviado
  * @returns {File} Arquivo solicitado
  */
 const getFile = async (req, res) => {
@@ -61,8 +70,7 @@ const getFile = async (req, res) => {
 
     return res.status(200).send(file);
   } catch (e) {
-    console.log(e);
-    return res.status(500).json(e.message);
+    return exceptionHandler(e, res);
   }
 };
 

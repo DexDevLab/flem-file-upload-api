@@ -1,33 +1,40 @@
 import { apiAllowCors, prisma } from "services";
-import path from "path";
+import { exceptionHandler } from "utils/exceptionHandler";
 
 /**
- * Handler de Requisição da Rota.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response
+ * Handler de manipulação dos detalhes do arquivo.
+ * @method handler
+ * @memberof module:getFileDetails
+ * @param {Object} req HTTP request.
+ * @param {Object} res HTTP response.
+ * @returns {Object} HTTP response como JSON contendo a resposta da query consultada.
  */
 const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
-      await getFileDetails(req, res);
-      break;
+      try {
+        const response = await getFileDetails(req, res);
+        return response;
+      } catch (e) {
+        return exceptionHandler(e, res);
+      }
     default:
-      res.status(405).send({ message: "Only GET requests allowed" });
-      break;
+      return exceptionHandler(null, res);
   }
 };
 
 export default apiAllowCors(handler);
 
-
 /**
  * Recebe a requisição do arquivo a ser baixado, acessa o BD para trazer
  * o arquivo com suas referências e retorna as propriedades do arquivo solicitado.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response 
- * @param {*} fileId ID do arquivo a ser enviado
- * @param {*} referenceObjId ID de referência do objeto a ser enviado
- * @param {*} appSource nome da aplicação de origem da transferência de arquivo
+ * @method getFileDetails
+ * @memberof module:getFileDetails
+ * @param {Object} req HTTP Request
+ * @param {Object} res HTTP Response
+ * @param {String} fileId ID do arquivo a ser enviado
+ * @param {String} referenceObjId ID de referência do objeto a ser enviado
+ * @param {String} appSource nome da aplicação de origem da transferência de arquivo
  * @returns {Object} Detalhamento das informações do arquivo
  */
 const getFileDetails = async (req, res) => {
@@ -55,9 +62,8 @@ const getFileDetails = async (req, res) => {
 
     return res.status(200).json({ fileDetails });
   } catch (e) {
-    console.log(e);
-    return res.status(500).json(e.message);
+    return exceptionHandler(e, res);
   }
 };
 
-export {getFileDetails};
+export { getFileDetails };

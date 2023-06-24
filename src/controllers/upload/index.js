@@ -7,9 +7,11 @@ import path from "path";
 /**
  * Função básica de Upload.
  * Recebe o arquivo, define as propriedades e o armazena em local temporário.
- * @param {*} appSource nome da aplicação de origem da transferência de arquivo
- * @param {*} referenceObjId ID do objeto de referência (padrão: "temp")
- * @param {*} req Requisição HTTP de origem da transferência de arquivo
+ * @method upload
+ * @memberof module:upload
+ * @param {String} appSource nome da aplicação de origem da transferência de arquivo
+ * @param {String} referenceObjId ID do objeto de referência (padrão: "temp")
+ * @param {Object} req Requisição HTTP de origem da transferência de arquivo
  * @returns {Function} Função de Callback
  */
 const upload = multer({

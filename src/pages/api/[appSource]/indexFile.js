@@ -1,21 +1,27 @@
 import { apiAllowCors, prisma } from "services";
 import fs from "fs";
 import getFileDetails from "./getFileDetails";
+import { exceptionHandler } from "utils/exceptionHandler";
 
 /**
- * Handler de Requisição da Rota.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response
+ * Handler de manipulação dos dados de indexação de arquivo.
+ * @method handler
+ * @memberof module:indexFile
+ * @param {Object} req HTTP request.
+ * @param {Object} res HTTP response.
+ * @returns {Object} HTTP response como JSON contendo a resposta da query consultada.
  */
 const handler = async (req, res) => {
   switch (req.method) {
     case "PATCH":
-      await indexFile(req, res);
-      break;
-
+      try {
+        const response = await indexFile(req, res);
+        return response;
+      } catch (e) {
+        return exceptionHandler(e, res);
+      }
     default:
-      res.status(405).send({ message: "Only PATCH requests allowed" });
-      break;
+      return exceptionHandler(null, res);
   }
 };
 
@@ -28,11 +34,13 @@ export default apiAllowCors(handler);
  * Esse método atualiza no BD as informações de referenceObjId com o referenceObjId gerado
  * ao realizar o upload, cria um diretório dentro do servidor de armazenamento com o nome apropriado,
  * e atualiza essas informações no BD.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response 
- * @param {*} fileId ID do arquivo a ser enviado
- * @param {*} referenceObjId ID de referência do objeto a ser enviado
- * @returns {*} Detalhes do arquivo com as informações atualizadas
+ * @method indexFile
+ * @memberof module:indexFile
+ * @param {Object} req HTTP Request
+ * @param {Object} res HTTP Response
+ * @param {String} fileId ID do arquivo a ser enviado
+ * @param {String} referenceObjId ID de referência do objeto a ser enviado
+ * @returns {Object} Detalhes do arquivo com as informações atualizadas
  */
 const indexFile = async (req, res) => {
   try {
@@ -87,7 +95,6 @@ const indexFile = async (req, res) => {
     
     return res.status(200).json(updateFileDetails);
   } catch (e) {
-    console.log(e);
-    return res.status(500).json(e.message);
+    return exceptionHandler(e, res);
   }
 };

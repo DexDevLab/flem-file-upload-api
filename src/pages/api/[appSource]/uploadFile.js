@@ -1,19 +1,26 @@
 import { upload } from "controllers/upload";
 import { apiAllowCors, prisma, runMiddleware } from "services";
+import { exceptionHandler } from "utils/exceptionHandler";
 
 /**
- * Handler de Requisição da Rota.
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response
+ * Handler de manipulação de upload de arquivo.
+ * @method handler
+ * @memberof module:uploadFile
+ * @param {Object} req HTTP request.
+ * @param {Object} res HTTP response.
+ * @returns {Object} HTTP response como JSON contendo a resposta da query consultada.
  */
 const handler = async (req, res) => {
   switch (req.method) {
     case "POST":
-      await uploadFile(req, res);
-      break;
+      try {
+        const response =  await uploadFile(req, res);
+        return response;
+      } catch (e) {
+        return exceptionHandler(e, res);
+      }
     default:
-      res.status(405).send({ message: "Only POST requests allowed" });
-      break;
+      return exceptionHandler(null, res)
   }
 };
 
@@ -25,10 +32,12 @@ export default apiAllowCors(handler);
  * 
  * Exemplo: http://localhost:3000/api/Teste/uploadFile?referenceObjId='3354f45'
  * 
- * @param {*} req HTTP Request
- * @param {*} res HTTP Response
- * @param {*} appSource nome da aplicação de origem da transferência de arquivo
- * @param {*} referenceObjId ID de referência do objeto a ser enviado
+ * @method uploadFile
+ * @memberof module:uploadFile
+ * @param {Object} req HTTP Request
+ * @param {Object} res HTTP Response
+ * @param {String} appSource nome da aplicação de origem da transferência de arquivo
+ * @param {String} referenceObjId ID de referência do objeto a ser enviado
  * @returns {File} Arquivo solicitado
  */
 const uploadFile = async (req, res) => {
@@ -66,8 +75,7 @@ const uploadFile = async (req, res) => {
 
     return res.status(200).json(fileCatalogOnDb);
   } catch (e) {
-    console.log(e);
-    return res.status(500).json(e.message);
+    return exceptionHandler(e, res);
   }
 };
 

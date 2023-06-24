@@ -1,5 +1,7 @@
 /**
  * Utilitário para dar override sobre erro do CORS com direcionamentos HTTP.
+ * @method apiAllowCors
+ * @memberof module:services
  * @param {Function} fn função contendo a requisição ou o objeto da rota.
  * @returns {Function} rota já trabalhada com os headers de segurança
  */
